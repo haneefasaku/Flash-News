@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash News</title>
+    <!-- font family popins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- font family roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">                                                                                                                                               
+    <!-- css link -->
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <!-- header -->
+    <nav>
+        <div class="nav-container container flex">
+            <div class="logo">
+                <a id="reload" href="#">
+                    <h1>Flash <span>News</span></h1>
+                </a>
+            </div>
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="nav-link nav-items" id="Ipl">IPL</li>
+                    <li class="nav-link nav-items" id="finance">Finance</li>
+                    <li class="nav-link nav-items" id="politics">Politics</li>
+                </ul>
+            </div>
+            <div class="search flex">
+                <input type="text" id="news-input" class="news-input" placeholder="eg.Science">
+                <button id="search-Button" class="search-Button">search</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- bodycontent -->
+    <main>
+        <div class="card-container container flex" id="cards-container">
+            
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container flex">
+            <a href="#">
+                <h1>Flash <span>News</span></h1>
+            </a>
+        </div>
+    </footer>
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-image">
+            </div>
+            <div class="card-content">
+                <h3 class="news-tittle" id="news-tittle">This is the tittle</h3>
+                <h6 class="news-source" id="news-source">End Gadget</h6>
+                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure repellat laboriosam molestias, eius deserunt quibusdam quasi unde magni. Id, ipsa!</p>
+            </div>
+        </div>
+    </template>
+
+    <script type="module" src="./index.js"></script>
+</body>
+</html>
