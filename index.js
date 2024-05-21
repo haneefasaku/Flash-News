@@ -1,6 +1,6 @@
 
-const corsheader = 'https://api.allorigins.win/get?url=';
-const newsapi = encodeURIComponent("https://newsapi.org/v2/everything?q=technology&sortBy=popularity&apiKey=afbc2f2ee5094d45885236bddc340ed7");
+const api_key = "afbc2f2ee5094d45885236bddc340ed7";
+const newsapi ="https://newsapi.org/v2/everything?q=technology&sortBy=popularity&apiKey=";
 
 window.addEventListener("load", ()=> getNews("india"));
 
@@ -10,7 +10,7 @@ reload.addEventListener("click", ()=>{
 })
 
 async function getNews(query){
-    const res = await fetch(corsheader + newsapi + query);
+    const res = await fetch(`{newsapi}{query}{api_key}`);
     const data = await res.json();
     bindData(data.articles)
 }
