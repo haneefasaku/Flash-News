@@ -1,6 +1,5 @@
-
-const api_key = "afbc2f2ee5094d45885236bddc340ed7";
-const newsapi ="https://newsapi.org/v2/everything?q=technology&sortBy=popularity&apiKey=";
+const API_KEY = "afbc2f2ee5094d45885236bddc340ed7";
+const url = "https://newsapi.org/v2/everything?q=";
 
 window.addEventListener("load", ()=> getNews("india"));
 
@@ -10,7 +9,7 @@ reload.addEventListener("click", ()=>{
 })
 
 async function getNews(query){
-    const res = await fetch(`{newsapi}{query}{api_key}`);
+    const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
     const data = await res.json();
     bindData(data.articles)
 }
