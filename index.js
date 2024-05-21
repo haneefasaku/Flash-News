@@ -1,5 +1,6 @@
-const API_KEY = "afbc2f2ee5094d45885236bddc340ed7";
-const url = "https://newsapi.org/v2/everything?q=";
+
+const corsheader = 'https://api.allorigins.win/get?url=';
+const newsapi = encodeURIComponent("https://newsapi.org/v2/everything?q=technology&sortBy=popularity&apiKey=afbc2f2ee5094d45885236bddc340ed7");
 
 window.addEventListener("load", ()=> getNews("india"));
 
@@ -9,7 +10,7 @@ reload.addEventListener("click", ()=>{
 })
 
 async function getNews(query){
-    const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
+    const res = await fetch(corsheader + newsapi + query);
     const data = await res.json();
     bindData(data.articles)
 }
